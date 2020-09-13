@@ -11,11 +11,11 @@ package com.unir.AdvPro.NicolasZ.struc;
  */
 public class Qualification {
 	private int number;
-	private int date;
+	private String date;
 	private int value;
 	private int percentage;
 
-	public Qualification(int number, int date, int value, int percentage) {
+	public Qualification(int number, String date, int value, int percentage) {
 		this.number = number;
 		this.date = date;
 		this.value = value;
@@ -30,11 +30,11 @@ public class Qualification {
 		this.number = number;
 	}
 
-	public int getDate() {
+	public String getDate() {
 		return date;
 	}
 
-	public void setDate(int date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 
