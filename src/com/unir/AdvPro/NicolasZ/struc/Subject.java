@@ -53,5 +53,6 @@ public class Subject {
 	public void setCumulativePercentage(float cumulativePercentage) {
 		this.cumulativePercentage = cumulativePercentage;
 	}
+  
 }
 

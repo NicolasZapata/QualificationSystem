@@ -27,106 +27,171 @@ public class Main extends javax.swing.JFrame {
   // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
   private void initComponents() {
 
-    JLabelSubject = new javax.swing.JLabel();
-    jLabelCumPercentage = new javax.swing.JLabel();
-    jLabelTotalQualification = new javax.swing.JLabel();
-    jTextFieldSubject = new javax.swing.JTextField();
-    jTextFieldTotalQualification = new javax.swing.JTextField();
-    jTextFieldCumPercentage = new javax.swing.JTextField();
-    jButtonAdd = new javax.swing.JButton();
-    jButtonViewList = new javax.swing.JButton();
+    jTextFieldID = new javax.swing.JTextField();
+    jTextFieldName = new javax.swing.JTextField();
+    jLabelID = new javax.swing.JLabel();
+    jLabelName = new javax.swing.JLabel();
+    jLabelTotal = new javax.swing.JLabel();
+    jTextFieldTotal = new javax.swing.JTextField();
+    jLabelCumulative = new javax.swing.JLabel();
+    jTextFieldCumulative = new javax.swing.JTextField();
+    jTextFieldDate = new javax.swing.JTextField();
+    jTextFieldNote = new javax.swing.JTextField();
+    jLabelDate = new javax.swing.JLabel();
+    jLabelNote = new javax.swing.JLabel();
+    jTextFieldValue = new javax.swing.JTextField();
+    jTextFieldPercentage = new javax.swing.JTextField();
+    jLabelValue = new javax.swing.JLabel();
+    jLabelPercentage = new javax.swing.JLabel();
+    jButtonAddNote = new javax.swing.JButton();
     jButtonExit = new javax.swing.JButton();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-    JLabelSubject.setText("Subject");
+    jLabelID.setText("ID");
 
-    jLabelCumPercentage.setText("Cumulative Percentage");
+    jLabelName.setText("Name");
 
-    jLabelTotalQualification.setText("Total qualification");
+    jLabelTotal.setText("Total");
 
-    jTextFieldTotalQualification.addActionListener(new java.awt.event.ActionListener() {
+    jLabelCumulative.setText("Cumulative");
+
+    jLabelDate.setText("Date");
+
+    jLabelNote.setText("N°  Note");
+
+    jTextFieldValue.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jTextFieldTotalQualificationActionPerformed(evt);
+        jTextFieldValueActionPerformed(evt);
       }
     });
 
-    jButtonAdd.setText("Add");
+    jLabelValue.setText("Value");
 
-    jButtonViewList.setText("View List");
-    jButtonViewList.addActionListener(new java.awt.event.ActionListener() {
+    jLabelPercentage.setText("Percentage");
+
+    jButtonAddNote.setText("Add Note");
+    jButtonAddNote.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButtonViewListActionPerformed(evt);
+        jButtonAddNoteActionPerformed(evt);
       }
     });
 
     jButtonExit.setText("Exit");
+    jButtonExit.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jButtonExitActionPerformed(evt);
+      }
+    });
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
     getContentPane().setLayout(layout);
     layout.setHorizontalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(layout.createSequentialGroup()
-        .addGap(18, 18, 18)
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
           .addGroup(layout.createSequentialGroup()
+            .addGap(165, 165, 165)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
               .addGroup(layout.createSequentialGroup()
-                .addComponent(JLabelSubject, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jTextFieldSubject, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
-              .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                .addGroup(layout.createSequentialGroup()
-                  .addComponent(jLabelTotalQualification, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                  .addGap(18, 18, 18)
-                  .addComponent(jTextFieldTotalQualification))
-                .addGroup(layout.createSequentialGroup()
-                  .addComponent(jLabelCumPercentage, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                  .addGap(18, 18, 18)
-                  .addComponent(jTextFieldCumPercentage, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))))
-            .addContainerGap(45, Short.MAX_VALUE))
+                .addGap(31, 31, 31)
+                .addComponent(jLabelID)
+                .addGap(169, 169, 169)
+                .addComponent(jLabelName))
+              .addGroup(layout.createSequentialGroup()
+                .addComponent(jTextFieldID, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(125, 125, 125)
+                .addComponent(jTextFieldName, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))))
           .addGroup(layout.createSequentialGroup()
-            .addGap(26, 26, 26)
-            .addComponent(jButtonAdd)
-            .addGap(132, 132, 132)
-            .addComponent(jButtonViewList)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jButtonExit)
-            .addGap(74, 74, 74))))
+            .addGap(110, 110, 110)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+              .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                  .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                      .addComponent(jTextFieldDate, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                      .addGap(33, 33, 33))
+                    .addGroup(layout.createSequentialGroup()
+                      .addGap(28, 28, 28)
+                      .addComponent(jLabelDate)
+                      .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                  .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                      .addGap(11, 11, 11)
+                      .addComponent(jLabelNote))
+                    .addComponent(jTextFieldNote, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                  .addGap(28, 28, 28)
+                  .addComponent(jTextFieldValue, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addGap(18, 18, 18)
+                  .addComponent(jTextFieldPercentage, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jLabelTotal)
+                .addGroup(layout.createSequentialGroup()
+                  .addGap(53, 53, 53)
+                  .addComponent(jButtonAddNote)
+                  .addGap(127, 127, 127)
+                  .addComponent(jButtonExit)))
+              .addGroup(layout.createSequentialGroup()
+                .addComponent(jTextFieldTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabelCumulative)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextFieldCumulative, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
+              .addGroup(layout.createSequentialGroup()
+                .addComponent(jLabelValue)
+                .addGap(47, 47, 47)
+                .addComponent(jLabelPercentage)))))
+        .addContainerGap(139, Short.MAX_VALUE))
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(layout.createSequentialGroup()
-        .addGap(41, 41, 41)
-        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(JLabelSubject)
-          .addComponent(jTextFieldSubject, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addGap(44, 44, 44)
-        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(jLabelCumPercentage)
-          .addComponent(jTextFieldCumPercentage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addGap(41, 41, 41)
+        .addGap(35, 35, 35)
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(jLabelTotalQualification)
-          .addComponent(jTextFieldTotalQualification, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)
+          .addComponent(jLabelID)
+          .addComponent(jLabelName, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(jButtonAdd)
-          .addComponent(jButtonExit)
-          .addComponent(jButtonViewList))
-        .addGap(83, 83, 83))
+          .addComponent(jTextFieldID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(jTextFieldName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addGap(32, 32, 32)
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+          .addComponent(jLabelTotal)
+          .addComponent(jTextFieldTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(jLabelCumulative)
+          .addComponent(jTextFieldCumulative, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addGap(31, 31, 31)
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+          .addComponent(jLabelDate)
+          .addComponent(jLabelNote)
+          .addComponent(jLabelValue)
+          .addComponent(jLabelPercentage))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+          .addComponent(jTextFieldDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(jTextFieldNote, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(jTextFieldValue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(jTextFieldPercentage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addGap(37, 37, 37)
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+          .addComponent(jButtonAddNote)
+          .addComponent(jButtonExit))
+        .addContainerGap(69, Short.MAX_VALUE))
     );
 
     pack();
   }// </editor-fold>//GEN-END:initComponents
 
-  private void jButtonViewListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonViewListActionPerformed
+  private void jTextFieldValueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldValueActionPerformed
     // TODO add your handling code here:
-  }//GEN-LAST:event_jButtonViewListActionPerformed
+  }//GEN-LAST:event_jTextFieldValueActionPerformed
 
-  private void jTextFieldTotalQualificationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTotalQualificationActionPerformed
+  private void jButtonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExitActionPerformed
+    this.dispose();
+  }//GEN-LAST:event_jButtonExitActionPerformed
+
+  private void jButtonAddNoteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddNoteActionPerformed
     // TODO add your handling code here:
-  }//GEN-LAST:event_jTextFieldTotalQualificationActionPerformed
+  }//GEN-LAST:event_jButtonAddNoteActionPerformed
 
 	/**
 	 * @param args the command line arguments
@@ -164,14 +229,23 @@ public class Main extends javax.swing.JFrame {
 	}
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
-  private javax.swing.JLabel JLabelSubject;
-  private javax.swing.JButton jButtonAdd;
+  private javax.swing.JButton jButtonAddNote;
   private javax.swing.JButton jButtonExit;
-  private javax.swing.JButton jButtonViewList;
-  private javax.swing.JLabel jLabelCumPercentage;
-  private javax.swing.JLabel jLabelTotalQualification;
-  private javax.swing.JTextField jTextFieldCumPercentage;
-  private javax.swing.JTextField jTextFieldSubject;
-  private javax.swing.JTextField jTextFieldTotalQualification;
+  private javax.swing.JLabel jLabelCumulative;
+  private javax.swing.JLabel jLabelDate;
+  private javax.swing.JLabel jLabelID;
+  private javax.swing.JLabel jLabelName;
+  private javax.swing.JLabel jLabelNote;
+  private javax.swing.JLabel jLabelPercentage;
+  private javax.swing.JLabel jLabelTotal;
+  private javax.swing.JLabel jLabelValue;
+  private javax.swing.JTextField jTextFieldCumulative;
+  private javax.swing.JTextField jTextFieldDate;
+  private javax.swing.JTextField jTextFieldID;
+  private javax.swing.JTextField jTextFieldName;
+  private javax.swing.JTextField jTextFieldNote;
+  private javax.swing.JTextField jTextFieldPercentage;
+  private javax.swing.JTextField jTextFieldTotal;
+  private javax.swing.JTextField jTextFieldValue;
   // End of variables declaration//GEN-END:variables
 }
