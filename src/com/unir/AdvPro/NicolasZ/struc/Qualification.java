@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.unir.AdvPro.NicolasZ.struc;
 
 /**
@@ -14,13 +9,27 @@ public class Qualification {
 	private String date;
 	private int value;
 	private int percentage;
+  private Subject subject;
 
-	public Qualification(int number, String date, int value, int percentage) {
-		this.number = number;
-		this.date = date;
-		this.value = value;
-		this.percentage = percentage;
-	}
+  /**
+   * The Qualifications that the teacher gives to the student
+   * 
+   * @param number
+   * @param date
+   * @param value
+   * @param percentage 
+   */
+	public Qualification() {
+
+  }
+
+  public Subject getSubject() {
+    return subject;
+  }
+
+  public void setSubject(Subject subject) {
+    this.subject = subject;
+  }
 
 	public int getNumber() {
 		return number;

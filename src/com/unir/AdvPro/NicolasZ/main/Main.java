@@ -1,9 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.unir.AdvPro.NicolasZ.main;
+
+import com.unir.AdvPro.NicolasZ.struc.Qualification;
+import com.unir.AdvPro.NicolasZ.struc.Subject;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -45,6 +46,7 @@ public class Main extends javax.swing.JFrame {
     jLabelPercentage = new javax.swing.JLabel();
     jButtonAddNote = new javax.swing.JButton();
     jButtonExit = new javax.swing.JButton();
+    jButtonViewList = new javax.swing.JButton();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -81,6 +83,13 @@ public class Main extends javax.swing.JFrame {
     jButtonExit.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         jButtonExitActionPerformed(evt);
+      }
+    });
+
+    jButtonViewList.setText("View List");
+    jButtonViewList.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jButtonViewListActionPerformed(evt);
       }
     });
 
@@ -128,7 +137,9 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(layout.createSequentialGroup()
                   .addGap(53, 53, 53)
                   .addComponent(jButtonAddNote)
-                  .addGap(127, 127, 127)
+                  .addGap(18, 18, 18)
+                  .addComponent(jButtonViewList)
+                  .addGap(31, 31, 31)
                   .addComponent(jButtonExit)))
               .addGroup(layout.createSequentialGroup()
                 .addComponent(jTextFieldTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -174,24 +185,62 @@ public class Main extends javax.swing.JFrame {
         .addGap(37, 37, 37)
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
           .addComponent(jButtonAddNote)
-          .addComponent(jButtonExit))
-        .addContainerGap(69, Short.MAX_VALUE))
+          .addComponent(jButtonExit)
+          .addComponent(jButtonViewList))
+        .addContainerGap(71, Short.MAX_VALUE))
     );
 
     pack();
   }// </editor-fold>//GEN-END:initComponents
 
   private void jTextFieldValueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldValueActionPerformed
-    // TODO add your handling code here:
   }//GEN-LAST:event_jTextFieldValueActionPerformed
 
+  /**
+   * Closing the program
+   * 
+   * @param evt 
+   */
   private void jButtonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExitActionPerformed
     this.dispose();
   }//GEN-LAST:event_jButtonExitActionPerformed
 
   private void jButtonAddNoteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddNoteActionPerformed
-    // TODO add your handling code here:
+    try{
+      System.out.println(jTextFieldID.getText().toString());
+      subject.setId(Integer.parseInt(jTextFieldID.getText().toString()));
+      subject.setName(jTextFieldName.getText().toString());
+      subject.setTotal(Float.parseFloat(jTextFieldTotal.getText().toString()));
+      subject.setCumulativePercentage(Float.parseFloat(jTextFieldCumulative.getText().toString()));
+      
+      
+      
+      
+      qualification.setNumber(Integer.parseInt(jTextFieldNote.getText().toString()));
+      qualification.setDate(jTextFieldName.getText().toString());
+      qualification.setValue(Integer.parseInt(jTextFieldValue.getText().toString()));
+      qualification.setPercentage(Integer.parseInt(jTextFieldPercentage.getText().toString()));
+      qualification.setSubject(subject);
+      listQualification.add(qualification);
+      JOptionPane.showConfirmDialog(null, "Data Provided");
+    }catch(Exception e){
+      JOptionPane.showMessageDialog(null, 
+              "Has ocurred a error with app, please type again",
+              "Error", 
+              JOptionPane.ERROR_MESSAGE);
+    }
   }//GEN-LAST:event_jButtonAddNoteActionPerformed
+
+  private void jButtonViewListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonViewListActionPerformed
+    try{
+      subject.PrintQualification(listQualification);
+    } catch(Exception e){
+      JOptionPane.showMessageDialog(null, 
+        "Has ocurred a with the list",
+        "Error", 
+        JOptionPane.ERROR_MESSAGE);
+    }
+  }//GEN-LAST:event_jButtonViewListActionPerformed
 
 	/**
 	 * @param args the command line arguments
@@ -227,10 +276,14 @@ public class Main extends javax.swing.JFrame {
 			}
 		});
 	}
+  Subject subject = new Subject();
+  Qualification qualification = new Qualification();
+  List<Qualification> listQualification = new ArrayList<Qualification>();
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
   private javax.swing.JButton jButtonAddNote;
   private javax.swing.JButton jButtonExit;
+  private javax.swing.JButton jButtonViewList;
   private javax.swing.JLabel jLabelCumulative;
   private javax.swing.JLabel jLabelDate;
   private javax.swing.JLabel jLabelID;

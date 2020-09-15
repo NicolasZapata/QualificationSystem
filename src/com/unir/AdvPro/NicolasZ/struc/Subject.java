@@ -1,9 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.unir.AdvPro.NicolasZ.struc;
+
+import java.util.List;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -15,11 +13,15 @@ public class Subject {
 	private float total;
 	private float cumulativePercentage;
 
-	public Subject(int id, String name, float total, float cumulativePercentage) {
-		this.id = id;
-		this.name = name;
-		this.total = total;
-		this.cumulativePercentage = cumulativePercentage;
+  /**
+   * This the Subject Courses when the teacher get the qualification
+   * 
+   * @param id
+   * @param name
+   * @param total
+   * @param cumulativePercentage 
+   */
+	public Subject() {
 	}
 
 	public int getId() {
@@ -53,6 +55,30 @@ public class Subject {
 	public void setCumulativePercentage(float cumulativePercentage) {
 		this.cumulativePercentage = cumulativePercentage;
 	}
+  
+  public void PrintQualification(List<Qualification> qualification){
+    
+    
+    
+    try{
+
+      StringBuilder stringBuilder = new StringBuilder();
+      for (int i = 0; i < qualification.size(); i++) {
+        stringBuilder.append(qualification.get(i).getValue());
+        stringBuilder.append(" ");
+        stringBuilder.append("\n");
+        stringBuilder.append(qualification.get(i).getSubject().getName());
+      }
+      
+
+      JOptionPane.showMessageDialog(null, stringBuilder.toString());
+    }catch(Exception e){
+      JOptionPane.showConfirmDialog(null, 
+              "Something is not working in the subject provide, please, make sure you type the data correctly",
+              "Error",JOptionPane.ERROR);
+    }
+    
+  }
   
 }
 

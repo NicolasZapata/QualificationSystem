@@ -73,7 +73,9 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
                                   <Component id="jButtonAddNote" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="jButtonViewList" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                                   <Component id="jButtonExit" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -134,8 +136,9 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jButtonAddNote" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jButtonExit" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonViewList" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="69" max="32767" attributes="0"/>
+              <EmptySpace pref="71" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -214,6 +217,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonExitActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonViewList">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="View List"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonViewListActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
